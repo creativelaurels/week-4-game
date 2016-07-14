@@ -1,1 +1,27 @@
-CRYSTAL COLLECTOR GAME
+CRYSTAL COLLECTOR GAME PSUEDOCODE
+
+
+Randomly Generate A Number - RGN
+	>Number range?
+
+Assign photos equal to a different value
+	>One value cannot exceed the randomly generated number
+	>Should values for each crystal be randomly generated each round?
+		- Number Range?
+	>Use a for loop to build all your images
+		-Array
+		-use jquery with an image tag
+	
+
+Add together values when clicked on - keep a tally of
+	> add function?
+
+Compare RGN to Tally
+	> If equal, wins++
+	> If greater than
+		- losses++
+		- gameReset()
+
+gameReset()
+	- New RGN
+	- New values for crystals

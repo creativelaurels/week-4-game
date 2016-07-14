@@ -1,0 +1,91 @@
+#container {
+	background-color: black;
+	padding: 20px;
+	margin: 20px;
+}
+
+#header {
+	background-color: black;
+	padding: 5px;
+	margin: 20px;
+}
+
+
+h1 {
+	font-family: 'IM Fell English SC', serif;
+	font-size: 70px;
+	letter-spacing: 10px;
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	font-family: 'IM Fell English SC', serif;
+	font-size: 45px;
+	color: white;
+}
+
+
+p {
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+
+#instructions {
+	background-image: url('../images/concrete_seamless.png');
+	margin: 20px;
+
+}
+
+#crystals {
+	text-align: center;
+	background-color: gray;
+
+}
+img.crystalImage {
+	width: 150px;
+	height: 150px;
+	align-items: center;
+}
+
+#row1 {
+	background-image: url('../images/concrete_seamless.png');
+}
+
+#row2 {
+	background-color: black;
+}
+
+#win {
+	background-color: black;
+	text-align: center;
+}
+
+#loss {
+	background-color: black;
+	text-align: center;
+}
+
+#goal-number-title {
+	background-color: black;
+	text-align: center;
+}
+
+#goal-number {
+	background-color: white;
+	text-align: center;
+	font-size: 80px;
+}
+
+#counter-title {
+	background-color: black;
+	text-align: center;
+}
+
+#counter {
+	background-color: white;
+	text-align: center;
+	font-size: 80px;
+}
