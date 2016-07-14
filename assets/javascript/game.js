@@ -68,6 +68,7 @@ $(document).ready(function() {
 				$('#loss').html(losses);
 				console.log(losses);
 		}
+	});
 
 function reset() {
 	// new random number to guess
@@ -81,5 +82,4 @@ function reset() {
 	// new four values for crystals
 }
 
-	});
 });
