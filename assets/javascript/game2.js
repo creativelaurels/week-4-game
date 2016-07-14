@@ -20,6 +20,7 @@ $(document).ready(function() {
 	var numbersMax = 4;
 
 
+
 	// creating the randomly generated goalNumber between 25 and 100
 	var goalNumber = Math.floor((Math.random() * 100) + 25);
 	// display the goal number to the div .number
@@ -29,6 +30,8 @@ $(document).ready(function() {
 		numbers.push(numberList[Math.floor(Math.random() * numberList.length)]);
 	};
 	console.log(numbers);
+
+
 
 
 //for loop to build all the images and set their values
@@ -56,18 +59,20 @@ $(document).ready(function() {
 			console.log(counter);
 			if (counter == goalNumber) {
 				win++;
+				reset();
 				$('#win').html(win);
-				newGame();
+				console.log(win);
 			}else if (counter > goalNumber) {
 				losses++;
+				reset();
 				$('#loss').html(losses);
-				newGame();
+				console.log(losses);
 		}
 	});
 
-function newGame() {
-	//remove data-num from images
+function reset() {
 	// new random number to guess
+	// creating the randomly generated goalNumber between 25 and 100
 	var goalNumber = Math.floor((Math.random() * 100) + 25);
 	// display the goal number to the div .number
 	$('#goal-number').text(goalNumber);
@@ -75,19 +80,6 @@ function newGame() {
 	counter = 0;
 	$('#counter').text(counter);
 	// new four values for crystals
-	var numbers = [];
-	//for loop to randomly generate four numbers for the variable numbers between 1-10
-	for (var i=0; i<numbersMax; i++) {
-		numbers.push(numberList[Math.floor(Math.random() * numberList.length)]);
-		console.log(numbers); // for checking
-		console.log(goalNumber);
-		console.log(counter);
-	}
+}
 
-	//for (var i=0; i<numbersMax; i++) {
-		// adding the attribute data-num and setting it equal to the numbers array
-		//crystalImage.remove('data-num', numbers[i]);
-		//crystalImage.attr('data-num', numbers[i]);
-	};
-};
-	});
+});
