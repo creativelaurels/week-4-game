@@ -32,8 +32,6 @@ $(document).ready(function() {
 	console.log(numbers);
 
 
-
-
 //for loop to build all the images and set their values
 	for (var i=0; i<numbersMax; i++) {
 		//sets the variable imageCrystal equal to the html element <img>
@@ -59,14 +57,12 @@ $(document).ready(function() {
 			console.log(counter);
 			if (counter == goalNumber) {
 				win++;
-				reset();
 				$('#win').html(win);
-				console.log(win);
+				reset();
 			}else if (counter > goalNumber) {
 				losses++;
-				reset();
 				$('#loss').html(losses);
-				console.log(losses);
+				reset();
 		}
 	});
 
@@ -80,6 +76,30 @@ function reset() {
 	counter = 0;
 	$('#counter').text(counter);
 	// new four values for crystals
+	var numbers = [];
+	//for loop to randomly generate four numbers for the variable numbers between 1-10
+	for (var i=0; i<numbersMax; i++) {
+		numbers.push(numberList[Math.floor(Math.random() * numberList.length)]);
+	};
+	console.log(numbers); // for checking
+	$(".crystalImage").remove();
+	for (var i=0; i<numbersMax; i++) {
+		//sets the variable imageCrystal equal to the html element <img>
+		// adding the attribute data-num and setting it equal to the numbers array
+		for (var i=0; i<numbersMax; i++) {
+			//sets the variable imageCrystal equal to the html element <img>
+			var crystalImage = $('<img>');
+			// adding the attribute data-num and setting it equal to the numbers array
+			crystalImage.attr('data-num', numbers[i]);
+			//adding the attribute src and setting it equal to the images array
+			crystalImage.attr('src', images[i]);
+			//adding the attribute alt and setting
+			crystalImage.attr('alt', 'crystals');
+			//adding a css class to the pictures
+			crystalImage.addClass('crystalImage');
+			$('#crystals').append(crystalImage);
+		}
+	}
 }
 
 });

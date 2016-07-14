@@ -86,7 +86,7 @@ function newGame() {
 
 	//for (var i=0; i<numbersMax; i++) {
 		// adding the attribute data-num and setting it equal to the numbers array
-		//crystalImage.remove('data-num', numbers[i]);
+		//crystalImage.removeAttribute('data-num', numbers[i]);
 		//crystalImage.attr('data-num', numbers[i]);
 	};
 };
