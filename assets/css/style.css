@@ -42,6 +42,8 @@ p {
 #crystals {
 	text-align: center;
 	background-color: gray;
+	padding: 20px;
+	background-image: url('../images/concrete_seamless.png');
 
 }
 img.crystalImage {
@@ -58,14 +60,21 @@ img.crystalImage {
 	background-color: black;
 }
 
-#win {
+#win-title, #loss-title {
 	background-color: black;
 	text-align: center;
+	color: white;
 }
 
-#loss {
+#win, #loss {
 	background-color: black;
 	text-align: center;
+	color: white;
+	font-family: 'IM Fell English SC', serif;
+	font-size: 70px;
+	letter-spacing: 10px;
+	text-align: center;
+	color: white;
 }
 
 #goal-number-title {
